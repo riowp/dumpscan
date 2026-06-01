@@ -68,15 +68,6 @@ public class MainActivity extends BaseActivity {
         if (!session.isLoggedIn()) return;
 
         setContentView(R.layout.activity_main);
-
-        // Wire custom toolbar
-        androidx.appcompat.widget.Toolbar toolbar = findViewById(R.id.toolbar);
-        if (toolbar != null) {
-            setSupportActionBar(toolbar);
-            if (getSupportActionBar() != null)
-                getSupportActionBar().setDisplayShowTitleEnabled(false);
-        }
-
         initViews();
         applyRoleAccess();
         updateDashboard();
